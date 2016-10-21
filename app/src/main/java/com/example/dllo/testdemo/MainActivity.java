@@ -1,13 +1,33 @@
 package com.example.dllo.testdemo;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.dllo.testdemo.base.BaseAty;
+
+
+public class MainActivity extends BaseAty implements View.OnClickListener {
+    private TextView mainTv;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViews() {
+//        mainTv = (TextView) findViewById(R.id.main_tv);
+        mainTv = bindView(R.id.main_tv);
+        setClick(this, mainTv);
+    }
+
+    @Override
+    protected void initDatas() {
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
