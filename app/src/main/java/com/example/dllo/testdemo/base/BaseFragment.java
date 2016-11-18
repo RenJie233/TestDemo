@@ -26,7 +26,7 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // 如果Fragment没有不指定布局
+        // 如果Fragment没有指定布局
         // 默认加载一个空布局, 防止程序崩溃
         if (getLayout() == 0) {
             return inflater.inflate(R.layout.null_layout, container, false);
